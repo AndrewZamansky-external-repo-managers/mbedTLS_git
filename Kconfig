@@ -1,0 +1,10 @@
+#
+
+config  MBEDTLS_FS_IO
+	bool   "mbedTLS will use file system"
+	default n
+
+
+config MBEDTLS_GIT_MANAGER_COMMIT_HASH
+	string "mbedTLS git commit hash"
+	default ""
