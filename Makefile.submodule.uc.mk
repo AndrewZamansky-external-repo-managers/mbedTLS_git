@@ -43,8 +43,11 @@ ifeq ($(CONFIG_HOST),y)
 endif
 
 # CURR_COMPONENT_DIR is pointing to parent directory
-INCLUDE_DIR +=$(CURR_COMPONENT_DIR)/mbedTLS_git/include
-DEFINES += MBEDTLS_CONFIG_FILE="ucprojects_config_mbedtls.h"
+DUMMY := $(call ADD_TO_GLOBAL_INCLUDE_PATH, \
+            $(CURR_COMPONENT_DIR)/mbedTLS_git/include)
+DUMMY := $(call ADD_TO_GLOBAL_DEFINES, \
+             MBEDTLS_CONFIG_FILE="ucprojects_config_mbedtls.h")
+
 DEFINES += MBEDTLS_NO_PLATFORM_ENTROPY
 
 INCLUDE_DIR +=$(MBEDTLS_PATH)/include
