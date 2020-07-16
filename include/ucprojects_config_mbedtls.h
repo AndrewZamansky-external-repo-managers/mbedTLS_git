@@ -106,6 +106,8 @@
 #define MBEDTLS_X509_USE_C
 #define MBEDTLS_X509_CRT_PARSE_C
 
+#define MBEDTLS_ENTROPY_HARDWARE_ALT
+
 /* Use platform mutexes in mbed TLS. */
 #define MBEDTLS_THREADING_C
 #define MBEDTLS_THREADING_ALT

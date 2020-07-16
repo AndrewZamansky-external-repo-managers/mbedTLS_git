@@ -96,6 +96,24 @@ static int mutex_unlock(
     return status;
 }
 
+
+#warning "add hardware entropy"
+int mbedtls_hardware_poll( void *data,
+                    unsigned char *output, size_t len, size_t *olen )
+{
+    ((void) data);
+    ((void) output);
+    *olen = 0;
+
+    if( len < sizeof(unsigned char) )
+        return( 0 );
+
+    *olen = sizeof(unsigned char);
+
+    return( 0 );
+}
+
+
 void mbedtls_port_init()
 {
     /* Set the mutex functions for mbed TLS thread safety. */
