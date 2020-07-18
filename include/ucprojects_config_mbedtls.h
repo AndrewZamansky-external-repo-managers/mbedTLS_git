@@ -115,6 +115,12 @@
 /* Enable the HKDF algorithm (RFC 5869). */
 #define MBEDTLS_HKDF_C
 
+#define MBEDTLS_SSL_RENEGOTIATION
+#define MBEDTLS_SSL_SESSION_TICKETS
+#define MBEDTLS_VERSION_C
+#define MBEDTLS_PK_WRITE_C
+#define MBEDTLS_X509_CRL_PARSE_C
+
 /* Validate mbed TLS configuration. */
 #include "mbedtls/check_config.h"
 
