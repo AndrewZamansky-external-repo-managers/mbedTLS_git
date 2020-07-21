@@ -110,8 +110,9 @@ SRC += library/ssl_tls.c
 SRC += library/pk.c
 SRC += library/timing.c
 
-DEFINES += DEBUG_MBEDTLS
-#SRC += wolfcrypt/src/logging.c
+#DEFINES += MBEDTLS_DEBUG_C
+SRC += library/debug.c
+
 
 SPEED_CRITICAL_FILES += $(SRC)
 VPATH += | $(MBEDTLS_PATH)
