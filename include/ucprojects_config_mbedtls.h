@@ -102,7 +102,11 @@
 #define MBEDTLS_SHA512_C
 #define MBEDTLS_SSL_CLI_C
 #define MBEDTLS_SSL_TLS_C
-#define MBEDTLS_TIMING_C
+
+#if defined(CONFIG_HOST)
+	#define MBEDTLS_TIMING_C
+#endif
+
 #define MBEDTLS_X509_USE_C
 #define MBEDTLS_X509_CRT_PARSE_C
 
